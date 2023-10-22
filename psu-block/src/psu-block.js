@@ -8,36 +8,40 @@ class PsuBlock extends LitElement {
   }
 
   static styles = css`
-    :host {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
+
+  :host{
+    display: grid;
+  }
+    
+    .info-block1{
+      display: inline-block;
       font-size: calc(10px + 2vmin);
-      color: #1a2b42;
-      max-width: 960px;
-      margin: 0 auto;
+      color: #fefefe;
+      width: 403.531px;
+      height: 201px;
+      margin-left: 20px;
+      border: 1px solid #444;
       text-align: center;
-      background-color: var(--psu-block-background-color);
+      padding-top: 101px;
+      background-color: #1e407c;
+    }
+
+    .info-block2{
+      display: inline-block;
+      font-size: calc(10px + 2vmin);
+      color: #1e407c;
+      width: 403.531px;
+      height: 201px;
+      margin-top: 20px;
+      margin-left: 20px;
+      border: 1px solid #444;
+      text-align: center;
+      padding-bottom: 10px;
+      background-color: #fefefe;
     }
 
     main {
       flex-grow: 1;
-    }
-
-    .logo {
-      margin-top: 36px;
-      animation: app-logo-spin infinite 20s linear;
-    }
-
-    @keyframes app-logo-spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
     }
 
     .app-footer {
@@ -57,30 +61,16 @@ class PsuBlock extends LitElement {
 
   render() {
     return html`
-      <main>
-        <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
-        <h1>${this.header}</h1>
-
-        <p>Edit <code>src/PsuBlock.js</code> and save to reload.</p>
-        <a
-          class="app-link"
-          href="https://open-wc.org/guides/developing-components/code-examples/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Code examples
-        </a>
-      </main>
-
-      <p class="app-footer">
-        🚽 Made with love by
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/open-wc"
-          >open-wc</a
-        >.
-      </p>
+      <div class="info-block-wrapper" >    
+                    <div class="info-block1">                    
+                    <h3>88,000+ students  </h3>                 
+                  </div>
+                  <div class="info-block2">                    
+                    <h3>58% </h3>
+                        <b>__________________</b>
+                        <p>Of students are Pennsylvania residents. </p>
+                    </div>
+                </div>
     `;
   }
 }
